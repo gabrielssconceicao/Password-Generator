@@ -1,0 +1,18 @@
+@mixin flex($direction:column, $justify:center, $align:center, $gap: 0px) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin padding($left:0,$top:0, $right:$left,  $bottom:$top) {
+  padding-left: $left;
+  padding-right: $right;
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin text-shadow($top, $left, $blur, $color) {
+  text-shadow: $top $left $blur $color;
+}

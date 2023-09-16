@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #efefef;
+}
+
+.header {
+  background-color: #432F75;
+  box-shadow: 0px 2px 2px rgba(137, 123, 175, 0.2);
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header__title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  text-shadow: 5px 4px 2px rgba(26, 26, 26, 0.4);
+}
+.header__subtitle {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 2px rgba(26, 26, 26, 0.8);
+}/*# sourceMappingURL=styles.css.map */
