@@ -219,26 +219,6 @@ main {
   gap: 5px;
   width: 100%;
 }
-.controllers__inputs__checkboxes label {
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
-  max-width: 1000px;
-  width: 100%;
-}
-.controllers__inputs__checkboxes label span {
-  width: 100px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-.controllers__inputs__checkboxes label input {
-  width: 30px;
-  height: 100%;
-  accent-color: #897BAF;
-}
 
 .buttons {
   background-color: #cdcdcd;

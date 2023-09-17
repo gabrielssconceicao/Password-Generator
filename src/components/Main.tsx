@@ -1,7 +1,38 @@
+import React, { useEffect, useState } from 'react';
 import CopySvg from '../assets/copy.svg';
 import RenewSvg from '../assets/renew.svg';
 import '../css/main.css';
-export const Main = () => {
+import { Checkbox } from './Checkbox';
+
+type CheckboxState = {
+  lowerCase: boolean;
+  upperCase: boolean;
+  symbol: boolean;
+  number: boolean;
+};
+export const Main: React.FC = () => {
+  // do a state object with key being the name of checkbox id
+  const [checkboxState, setCheckboxState] = useState<CheckboxState>({
+    lowerCase: true,
+    upperCase: false,
+    symbol: false,
+    number: false,
+  });
+  const onCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //copy the checkbox state object and update the state
+    const newCheckboxState: CheckboxState = {
+      ...checkboxState,
+      [e.target.id]: e.target.checked,
+    };
+
+    if (Object.values(newCheckboxState).every((el) => el === false)) {
+      newCheckboxState.lowerCase = true;
+    }
+
+    setCheckboxState(newCheckboxState);
+  };
+  useEffect(() => console.log('Main Renderizou'), []);
+
   return (
     <main>
       <section className="container display">
@@ -20,6 +51,7 @@ export const Main = () => {
           <div className="display__progress-bar"></div>
         </div>
       </section>
+
       <section className="container controllers">
         <p className="controllers__text font-2x">Password length: {'$size'}</p>
         <div className="controllers__inputs">
@@ -32,22 +64,30 @@ export const Main = () => {
             max={100}
           />
           <div className="controllers__inputs__checkboxes">
-            <label htmlFor="lowerCase">
-              <span>Lower Case</span>
-              <input type="checkbox" name="password-strong" id="lowerCase" />
-            </label>
-            <label htmlFor="upperCase">
-              <span>Upper Case</span>
-              <input type="checkbox" name="password-strong" id="upperCase" />
-            </label>
-            <label htmlFor="symbol">
-              <span>Symbols</span>
-              <input type="checkbox" name="password-strong" id="symbol" />
-            </label>
-            <label htmlFor="number">
-              <span>Numbers</span>
-              <input type="checkbox" name="password-strong" id="number" />
-            </label>
+            <Checkbox
+              text="Lower Case"
+              id="lowerCase"
+              isChecked={checkboxState.lowerCase}
+              onChange={onCheckboxChange}
+            />
+            <Checkbox
+              text="Uper Case"
+              id="upperCase"
+              isChecked={checkboxState.upperCase}
+              onChange={onCheckboxChange}
+            />
+            <Checkbox
+              text=" Symbols"
+              id="symbol"
+              isChecked={checkboxState.symbol}
+              onChange={onCheckboxChange}
+            />
+            <Checkbox
+              text="Numbers"
+              id="number"
+              isChecked={checkboxState.number}
+              onChange={onCheckboxChange}
+            />
           </div>
         </div>
       </section>

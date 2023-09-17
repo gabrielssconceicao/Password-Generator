@@ -104,23 +104,6 @@ main {
       flex:0.4;
       @include flex(column,$gap: 5px);
       width: 100%;
-
-      label {
-        height: 30px;
-        cursor: pointer;
-        @include flex(row-reverse, space-around, $gap: 20px);
-        @include max-width($max-container-width);
-        span {
-          width: 100px;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-        input {
-          width: 30px;
-          height: 100%;
-          accent-color: $light-primary-color;
-        }
-      }
     }
   }
 }
