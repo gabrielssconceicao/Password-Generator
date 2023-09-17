@@ -71,7 +71,7 @@ export const Main: React.FC = () => {
               onChange={onCheckboxChange}
             />
             <Checkbox
-              text="Uper Case"
+              text="Upper Case"
               id="upperCase"
               isChecked={checkboxState.upperCase}
               onChange={onCheckboxChange}
