@@ -4,7 +4,7 @@ import '../css/main.css';
 export const Main = () => {
   return (
     <main>
-      <section className="container">
+      <section className="container" id="display">
         <div className="container__text">
           <input
             className="font-4x"

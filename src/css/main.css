@@ -17,46 +17,67 @@
 main {
   height: 50vh;
   background-color: #15063A;
-}
-
-.container {
-  max-width: 700px;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 10px auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.container__text {
-  background-color: #efefef;
-  max-width: inherit;
-  width: 100%;
-  display: flex;
-}
-.container__text input {
+
+.container {
   max-width: 700px;
   width: 100%;
+  color: #1a1a1a;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container__text {
+  max-width: 700px;
+  background-color: #cdcdcd;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0px;
+}
+.container__text input {
+  flex: 1;
+  max-width: 700px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.container__text img {
+  width: 50px;
+  max-width: 700px;
 }
 .container__progress {
-  background-color: #ababab;
-  width: 100%;
+  max-width: 700px;
+  background-color: #efefef;
   height: 10px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 .container__progress-bar {
-  width: 70%;
+  height: 10px;
   background-color: #1a1a1a;
-  height: inherit;
-  border-radius: inherit;
-  transition: all 0.6s ease-in;
+  width: 45%;
+  transition: all 0.6s ease-in-out;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }/*# sourceMappingURL=main.css.map */
