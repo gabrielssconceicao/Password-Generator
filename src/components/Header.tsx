@@ -1,12 +1,17 @@
 import React from 'react';
 import '../css/header.css';
-export const Header: React.FC = () => {
+interface HeaderProps {
+  title: string;
+  description: string;
+}
+export const Header: React.FC<HeaderProps> = ({
+  description,
+  title,
+}: HeaderProps) => {
   return (
     <header className="header">
-      <h1 className="header__title">Password Generator</h1>
-      <p className="header__subtitle">
-        With our password generator create strong password for you
-      </p>
+      <h1 className="header__title">{title}</h1>
+      <p className="header__subtitle">{description}</p>
     </header>
   );
 };

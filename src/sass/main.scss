@@ -4,7 +4,11 @@
 main {
   height: $main-height;
   @include flex($justify:center, $gap:75px);
-  @include padding(20px)
+  @include padding(20px);
+
+  @include media-max-width($tablet) {
+    @include flex($gap: 50px);
+  }
 }
 .container {
   @include max-width($max-container-width);
@@ -28,8 +32,17 @@ main {
     }
 
     img {
-      @include max-width($max-container-width,10%);
+      @include max-width($max-container-width,8%);
       cursor: pointer;
+      @include media-max-width($tablet) {
+        width: 11%;
+      }
+      @include media-max-width($mobile) {
+        width: 12.5%;
+      }
+      @include media-max-width($mobile-small) {
+        width: 16%;
+      }
     }
 
   }
@@ -73,10 +86,15 @@ main {
     @include max-width($max-container-width);
     @include flex(row,$gap: 10px);
     @include padding(0px,15px);
-
+    @include media-max-width($tablet) {
+      flex-direction: column;
+    }
     &__range{
       flex: 0.6;
       margin-left: 10px;
+      @include media-max-width($tablet) {
+        margin-left: 0;
+      }
       @include slider($white,$primary-color);
       @include radius(50px,50px);
     }
@@ -99,7 +117,7 @@ main {
         input {
           width: 30px;
           height: 100%;
-          accent-color: $primary-color;
+          accent-color: $light-primary-color;
         }
       }
     }

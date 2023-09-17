@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+footer {
+  background-color: $primary-color;
+  height: $footer-height;
+  @include flex();
+  p {
+    text-align: center;
+  }
+}

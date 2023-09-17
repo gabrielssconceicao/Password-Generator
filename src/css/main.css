@@ -15,7 +15,7 @@
 }
 
 main {
-  height: calc(100vh - 20vh - 10vh);
+  height: calc(100vh - 150px - 50px - 20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,6 +25,15 @@ main {
   padding-right: 20px;
   padding-top: 0;
   padding-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
 .container {
@@ -64,8 +73,23 @@ main {
 }
 .display__text img {
   max-width: 1000px;
-  width: 10%;
+  width: 8%;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .display__text img {
+    width: 11%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .display__text img {
+    width: 12.5%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .display__text img {
+    width: 16%;
+  }
 }
 .display__progress {
   max-width: 1000px;
@@ -123,6 +147,11 @@ main {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+@media screen and (max-width: 768px) {
+  .controllers__inputs {
+    flex-direction: column;
+  }
+}
 .controllers__inputs__range {
   flex: 0.6;
   margin-left: 10px;
@@ -130,6 +159,11 @@ main {
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+@media screen and (max-width: 768px) {
+  .controllers__inputs__range {
+    margin-left: 0;
+  }
 }
 .controllers__inputs__range.slider {
   -webkit-appearance: none;
@@ -201,5 +235,5 @@ main {
 .controllers__inputs__checkboxes label input {
   width: 30px;
   height: 100%;
-  accent-color: #432F75;
+  accent-color: #897BAF;
 }/*# sourceMappingURL=main.css.map */

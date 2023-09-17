@@ -79,3 +79,9 @@
   max-width: $maxWidth;
   width: $width;
 }
+
+@mixin media-max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

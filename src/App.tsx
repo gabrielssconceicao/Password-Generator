@@ -1,11 +1,20 @@
 import { Header } from './components/Header';
 import { Main } from './components/Main';
+import appContent from './appContent';
+import { Footer } from './components/Footer';
 function App() {
   return (
     <>
-      <Header />
+      <Header
+        title={appContent.header.title}
+        description={appContent.header.description}
+      />
       <Main />
-      <footer>Footer</footer>
+      <Footer
+        text={appContent.footer.text}
+        copyRight={appContent.footer.copyRight}
+        githubLink={appContent.footer.githubLink}
+      />
     </>
   );
 }
