@@ -51,6 +51,15 @@ export const Main = () => {
           </div>
         </div>
       </section>
+
+      <section className="container buttons">
+        <button className="button" type="button">
+          Copy
+        </button>
+        <button className="button" type="button">
+          Re Do
+        </button>
+      </section>
     </main>
   );
 };

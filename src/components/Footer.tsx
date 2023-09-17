@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({
     <footer>
       <p>
         {text}
-        <a href={githubLink}>
+        <a href={githubLink} target="_blank">
           <i className="fab fa-github"></i>
         </a>
       </p>

@@ -6,4 +6,13 @@
 body {
   background-color: #1a1a1a;
   color: #efefef;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0px;
 }/*# sourceMappingURL=global.css.map */

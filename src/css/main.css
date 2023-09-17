@@ -15,16 +15,17 @@
 }
 
 main {
-  height: calc(100vh - 150px - 50px - 20px);
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 75px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
   main {
@@ -216,6 +217,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  width: 100%;
 }
 .controllers__inputs__checkboxes label {
   height: 30px;
@@ -236,4 +238,40 @@ main {
   width: 30px;
   height: 100%;
   accent-color: #897BAF;
+}
+
+.buttons {
+  background-color: #cdcdcd;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+}
+.buttons .button {
+  height: 30px;
+  flex: 0.3;
+  border: none;
+  background-color: #897BAF;
+  color: #efefef;
+  cursor: pointer;
+  border: 2px solid #432F75;
+  box-shadow: 3px 3px 0px #432F75;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.buttons .button:hover {
+  box-shadow: inset 3px 3px 0px #432F75;
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */

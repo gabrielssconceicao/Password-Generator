@@ -4,7 +4,7 @@
 main {
   height: $main-height;
   @include flex($justify:center, $gap:75px);
-  @include padding(20px);
+  @include padding(10px,20px);
 
   @include media-max-width($tablet) {
     @include flex($gap: 50px);
@@ -103,6 +103,7 @@ main {
     &__checkboxes {
       flex:0.4;
       @include flex(column,$gap: 5px);
+      width: 100%;
 
       label {
         height: 30px;
@@ -121,5 +122,32 @@ main {
         }
       }
     }
+  }
+}
+
+.buttons {
+  background-color: $container-bg;
+  @include padding(3px,5px);
+  @include radius($container-radius);
+  @include flex(row, space-around, center);
+
+
+  .button {
+      height: 30px;
+      flex: 0.3;
+      border: none;
+      background-color: $light-primary-color;
+      color: $white;
+      cursor: pointer;
+      border: 2px solid $primary-color;
+      box-shadow: 3px 3px 0px $primary-color;
+      font-size: 15px;
+
+      &:hover {
+        box-shadow: inset 3px 3px 0px $primary-color;
+        font-size: 12px;
+      }
+      @include radius(10px);
+
   }
 }

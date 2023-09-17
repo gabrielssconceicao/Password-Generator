@@ -3,8 +3,24 @@
 footer {
   background-color: $primary-color;
   height: $footer-height;
-  @include flex();
+  @include flex(row,$gap:10px);
+
+  @include media-max-width($mobile) {
+    @include flex(column, $align: stretch, $gap:10px);
+  }
   p {
     text-align: center;
+    flex:1;
+    a {
+      margin-left: 10px;
+
+      i {
+        color: $white;
+      }
+    }
+
+    i {
+      margin-right: 10px;
+    }
   }
 }
