@@ -4,8 +4,8 @@ import '../css/main.css';
 export const Main = () => {
   return (
     <main>
-      <section className="container" id="display">
-        <div className="container__text">
+      <section className="container display">
+        <div className="display__text">
           <input
             className="font-4x"
             type="text"
@@ -16,15 +16,22 @@ export const Main = () => {
           <img src={CopySvg} alt="Copy-svg image" />
           <img src={RenewSvg} alt="Renew-svg image" />
         </div>
-        <div className="container__progress">
-          <div className="container__progress-bar"></div>
+        <div className="display__progress">
+          <div className="display__progress-bar"></div>
         </div>
       </section>
-      <section className="container">
-        <p>Password length: {'$size'}</p>
-        <div>
-          <input type="range" name="range" id="range" min={6} max={100} />
-          <div>
+      <section className="container controllers">
+        <p className="controllers__text font-2x">Password length: {'$size'}</p>
+        <div className="controllers__inputs">
+          <input
+            className="controllers__inputs__range slider"
+            type="range"
+            name="range"
+            id="range"
+            min={6}
+            max={100}
+          />
+          <div className="controllers__inputs__checkboxes">
             <label htmlFor="lowerCase">
               <span>Lower Case</span>
               <input type="checkbox" name="password-strong" id="lowerCase" />

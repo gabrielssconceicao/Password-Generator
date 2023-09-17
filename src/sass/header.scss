@@ -5,7 +5,7 @@
 .header {
   background-color: $primary-color;
   box-shadow: 0px 2px 2px rgba($color: $light-primary-color, $alpha: 0.2);
-  margin-bottom: 0.8rem;
+  height: $header-height;
   @include flex($gap: 20px);
   @include padding($top:10px);
 

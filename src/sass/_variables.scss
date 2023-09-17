@@ -7,6 +7,11 @@ $black: #1a1a1a;
 
 $container-bg: #cdcdcd;
 
-$max-container-width: 700px;
+$max-container-width: 1000px;
 $container-radius: 5px;
 $progress-bar-height: 10px;
+
+
+$header-height: 20vh;
+$footer-height: 10vh;
+$main-height: calc(100vh - #{$header-height} - #{$footer-height});

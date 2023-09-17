@@ -2,20 +2,19 @@
 @import 'mixins';
 @include fontSize(4);
 main {
-  height: 50vh;
-  background-color: $dark-primary-color;
-  @include flex($gap:10px);
-  @include padding(10px,20px);
+  height: $main-height;
+  @include flex($justify:center, $gap:75px);
+  @include padding(20px)
 }
 .container {
-  max-width: $max-container-width;
-  width: 100%;
+  @include max-width($max-container-width);
   color: $black;
   height: fit-content;
+}
 
-
+.display {
   &__text {
-    max-width: $max-container-width;
+    @include max-width($max-container-width);
     background-color: $container-bg;
     @include radius($container-radius,$container-radius,0,0);
     @include flex(row, $align: stretch);
@@ -24,21 +23,21 @@ main {
       flex:1;
       max-width: $max-container-width;
       width: 100%;
+      @include padding(10px,0);
       @include radius($container-radius,0,0,0);
     }
 
     img {
-      width: 50px;
-      max-width: $max-container-width;
+      @include max-width($max-container-width,10%);
+      cursor: pointer;
     }
 
   }
 
   &__progress {
-    max-width: $max-container-width;
+    @include max-width($max-container-width);
     background-color: $white;
     height: $progress-bar-height;
-    width: 100%;
     @include radius(0,0,$container-radius,$container-radius);
 
     &-bar {
@@ -46,9 +45,63 @@ main {
       background-color: $black;
       width: 45%;
       transition: all 0.6s ease-in-out;
-      @include radius($bottomLeft:$container-radius,$bottomRight:$container-radius)
+      @include radius($bottomLeft:$container-radius,$bottomRight:$container-radius);
     }
   }
+}
 
 
+.controllers {
+  background-color: $container-bg;
+  height: fit-content;
+  @include radius($container-radius);
+
+
+  &__text {
+    color: $black;
+    background-color: $white;
+    max-width: $max-container-width;
+    width: 100%;
+    padding: inherit;
+
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    @include radius($container-radius,$container-radius,0,0);
+  }
+
+  &__inputs {
+    @include max-width($max-container-width);
+    @include flex(row,$gap: 10px);
+    @include padding(0px,15px);
+
+    &__range{
+      flex: 0.6;
+      margin-left: 10px;
+      @include slider($white,$primary-color);
+      @include radius(50px,50px);
+    }
+
+
+    &__checkboxes {
+      flex:0.4;
+      @include flex(column,$gap: 5px);
+
+      label {
+        height: 30px;
+        cursor: pointer;
+        @include flex(row-reverse, space-around, $gap: 20px);
+        @include max-width($max-container-width);
+        span {
+          width: 100px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        input {
+          width: 30px;
+          height: 100%;
+          accent-color: $primary-color;
+        }
+      }
+    }
+  }
 }
