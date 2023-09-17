@@ -3,15 +3,23 @@ import RenewSvg from '../assets/renew.svg';
 export const Main = () => {
   return (
     <main>
-      <section>
-        <input type="text" name="password-text" />
-        <div>
+      <section className="container">
+        <div className="container__text">
+          <input
+            className="font-4x"
+            type="text"
+            name="password-text"
+            disabled
+            value={5}
+          />
           <img src={CopySvg} alt="Copy-svg image" />
           <img src={RenewSvg} alt="Renew-svg image" />
         </div>
-        <div>Progress bar</div>
+        <div className="container__progress">
+          <div className="container__progress-bar"></div>
+        </div>
       </section>
-      <section>
+      <section className="container">
         <p>Password length: {'$size'}</p>
         <div>
           <input type="range" name="range" id="range" min={6} max={100} />

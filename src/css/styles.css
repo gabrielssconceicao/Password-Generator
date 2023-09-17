@@ -34,4 +34,67 @@ body {
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-shadow: 2px 2px 2px rgba(26, 26, 26, 0.8);
+}
+
+.font-1x {
+  font-size: 10px;
+}
+
+.font-2x {
+  font-size: 20px;
+}
+
+.font-3x {
+  font-size: 30px;
+}
+
+.font-4x {
+  font-size: 40px;
+}
+
+main {
+  height: 50vh;
+  background-color: #15063A;
+}
+
+.container {
+  max-width: 700px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 10px auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.container__text {
+  background-color: #efefef;
+  max-width: inherit;
+  width: 100%;
+  display: flex;
+}
+.container__text input {
+  max-width: 700px;
+  width: 100%;
+}
+.container__progress {
+  background-color: #ababab;
+  width: 100%;
+  height: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.container__progress-bar {
+  width: 70%;
+  background-color: #1a1a1a;
+  height: inherit;
+  border-radius: inherit;
+  transition: all 0.6s ease-in;
 }/*# sourceMappingURL=styles.css.map */

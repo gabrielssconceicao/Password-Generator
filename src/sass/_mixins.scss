@@ -16,3 +16,18 @@
 @mixin text-shadow($top, $left, $blur, $color) {
   text-shadow: $top $left $blur $color;
 }
+
+@mixin radius($topLeft:0px, $topRight: $topLeft, $bottomLeft: $topLeft, $bottomRight: $topLeft) {
+  border-top-left-radius: $topLeft;
+  border-top-right-radius: $topRight;
+  border-bottom-left-radius: $bottomLeft;
+  border-bottom-right-radius: $bottomRight;
+}
+
+@mixin fontSize($n) {
+  @for $i from 1 through $n {
+    .font-#{$i}x {
+      font-size: 10px * $i;
+    }
+  }
+}

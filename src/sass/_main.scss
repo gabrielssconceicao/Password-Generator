@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+@include fontSize(4);
+main {
+  height: 50vh;
+  background-color: $dark-primary-color;
+}
+.container {
+  max-width: $max-container-width;
+  height: fit-content;
+  margin: 10px auto;
+  @include padding(10px,20px);
+  @include flex(column);
+
+
+  &__text {
+    background-color: $white;
+    max-width: inherit;
+    width: 100%;
+    display: flex;
+
+    input {
+      max-width: $max-container-width;
+      width: 100%;
+    }
+  }
+
+  &__progress {
+    background-color: $gray;
+    width: 100%;
+    height: 10px;
+    @include radius($bottomLeft: 5px,$bottomRight: 5px);
+
+    &-bar {
+      width: 70%;
+      background-color: $black;
+      height: inherit;
+      border-radius: inherit;
+      transition: all 0.6s ease-in;
+    }
+  }
+
+}
