@@ -1,5 +1,6 @@
 import CopySvg from '../assets/copy.svg';
 import RenewSvg from '../assets/renew.svg';
+import '../css/main.css';
 export const Main = () => {
   return (
     <main>
