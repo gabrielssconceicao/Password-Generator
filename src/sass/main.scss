@@ -27,6 +27,7 @@ main {
       flex:1;
       max-width: $max-container-width;
       width: 100%;
+      transition: font-size 0.5s ease-in-out;
       @include padding(10px,0);
       @include radius($container-radius,0,0,0);
     }
@@ -55,13 +56,24 @@ main {
 
     &-bar {
       height: $progress-bar-height;
-      background-color: $black;
-      width: 45%;
       transition: all 0.6s ease-in-out;
+
       @include radius($bottomLeft:$container-radius,$bottomRight:$container-radius);
+
+      &.critical {
+        background: #eb5757;
+      }
+      &.warning {
+        background: #f2c94c;
+      }
+      &.safe {
+        background: #27ae60;
+      }
     }
   }
 }
+
+
 
 
 .controllers {

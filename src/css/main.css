@@ -1,17 +1,17 @@
 .font-1x {
-  font-size: 10px;
+  font-size: 0.5rem;
 }
 
 .font-2x {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .font-3x {
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .font-4x {
-  font-size: 40px;
+  font-size: 2rem;
 }
 
 main {
@@ -63,6 +63,7 @@ main {
   flex: 1;
   max-width: 1000px;
   width: 100%;
+  transition: font-size 0.5s ease-in-out;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 0;
@@ -104,13 +105,20 @@ main {
 }
 .display__progress-bar {
   height: 10px;
-  background-color: #1a1a1a;
-  width: 45%;
   transition: all 0.6s ease-in-out;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.display__progress-bar.critical {
+  background: #eb5757;
+}
+.display__progress-bar.warning {
+  background: #f2c94c;
+}
+.display__progress-bar.safe {
+  background: #27ae60;
 }
 
 .controllers {

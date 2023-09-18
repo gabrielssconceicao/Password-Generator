@@ -27,7 +27,7 @@
 @mixin fontSize($n) {
   @for $i from 1 through $n {
     .font-#{$i}x {
-      font-size: 10px * $i;
+      font-size: 0.5rem * $i;
     }
   }
 }
