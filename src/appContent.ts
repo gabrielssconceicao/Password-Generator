@@ -1,7 +1,7 @@
 export default {
   header: {
     title: 'Password Generator',
-    description: 'With our password generator create strong password for you',
+    description: 'Create strong passwords with our password generator ',
   },
   footer: {
     text: 'Made by Gabriel',

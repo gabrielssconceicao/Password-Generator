@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import CopySvg from '../assets/copy.svg';
-import RenewSvg from '../assets/renew.svg';
+import Refresh from '../assets/refresh.svg';
 import '../css/main.css';
 import { Checkbox } from './Checkbox';
 import { CheckboxState } from '../interfaces/main';
@@ -80,6 +80,18 @@ export const Main: React.FC = () => {
 
   return (
     <main>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <section className="container display">
         <div className="display__text">
           <input
@@ -92,11 +104,7 @@ export const Main: React.FC = () => {
             value={password}
           />
           <img src={CopySvg} alt="Copy-svg image" onClick={copyToClipboard} />
-          <img
-            src={RenewSvg}
-            alt="Renew-svg image"
-            onClick={generatePassword}
-          />
+          <img src={Refresh} alt="Renew-svg image" onClick={generatePassword} />
         </div>
         <div className="display__progress">
           <div
@@ -165,18 +173,6 @@ export const Main: React.FC = () => {
           New
         </button>
       </section>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
 
       <ToastContainer />
     </main>
