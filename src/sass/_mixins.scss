@@ -35,6 +35,7 @@
 @mixin slider($sliderBodyBg,$sliderThumbBg) {
   &.slider {
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 25px;
     background: $sliderBodyBg;

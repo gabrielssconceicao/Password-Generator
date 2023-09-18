@@ -5,7 +5,8 @@ import '../css/main.css';
 import { Checkbox } from './Checkbox';
 import { CheckboxState } from '../interfaces/main';
 import { genPassword } from '../utils/generatePassword';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const Main: React.FC = () => {
   // rangeValue
   const [rangeValue, setRangeValue] = useState<number>(6);
@@ -64,6 +65,16 @@ export const Main: React.FC = () => {
   // do a coy function that set on clipboard the password
   const copyToClipboard = () => {
     navigator.clipboard.writeText(password);
+    toast.success('Password copied', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+    });
   };
   useEffect(() => generatePassword(), [generatePassword]);
 
@@ -154,6 +165,20 @@ export const Main: React.FC = () => {
           New
         </button>
       </section>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+
+      <ToastContainer />
     </main>
   );
 };
